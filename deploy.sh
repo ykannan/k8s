@@ -22,3 +22,4 @@ kubectl set image deployments/client-deployment server=ykannan108/multi-client:$
 kubectl set image deployments/worker-deployment server=ykannan108/multi-worker:$SHA
 
 #ignore the unstaged decrypted file
+git status -uno
