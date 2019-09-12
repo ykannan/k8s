@@ -1,7 +1,7 @@
 #build docker images
 docker build -t ykannan108/multi-client:latest -t ykannan108/multi-client:$SHA -f ./client/Dockerfile ./client
 docker build -t ykannan108/multi-server:latest -t ykannan108/multi-server:$SHA -f ./server/Dockerfile ./server
-docker build -t ykannan108/multi-worker:latest -t ykannan108/multi-worker:$SHA -f ./worker/Dcokerfile ./worker
+docker build -t ykannan108/multi-worker:latest -t ykannan108/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 
 #push docker latestimages
 docker push ykannan108/multi-client:latest
