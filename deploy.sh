@@ -8,6 +8,7 @@ docker push ykannan108/multi-client:latest
 docker push ykannan108/multi-server:latest
 docker push ykannan108/multi-worker:latest
 
+#push images with tags
 docker push ykannan108/multi-client:$SHA
 docker push ykannan108/multi-server:$SHA
 docker push ykannan108/multi-worker:$SHA
