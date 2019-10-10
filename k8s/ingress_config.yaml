@@ -17,3 +17,7 @@ spec:
             backend:
              serviceName: server-cluster-ip-service
              servicePort: 5000
+          - path: /prometheus/?(.*)
+            backend:
+             serviceName: prometheus-cluster-ip-service
+             servicePort: 9090
