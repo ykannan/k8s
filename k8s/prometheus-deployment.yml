@@ -10,8 +10,7 @@ spec:
       labels:
         component: prometheus-server
     spec:
-      serviceAccountName: prom-monitoring
-      automountServiceAccountToken: false
+      serviceAccountName: prometheus-monitoring
       containers:  
         - name:  prometheus
           image: prom/prometheus:v2.2.1
