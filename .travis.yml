@@ -17,10 +17,10 @@ before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
-- echo "PASS"
+- kubectl apply -f ./k8s/monitoring/prometheus
 
-deploy:
-  provider: script
-  script: bash ./deploy.sh
-  on:
-    branch: master
+# deploy:
+#   provider: script
+#   script: bash ./deploy.sh
+#   on:
+#     branch: master
