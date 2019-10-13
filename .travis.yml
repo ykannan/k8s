@@ -17,6 +17,6 @@ before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
 script:
-- kubectl apply -f ./k8/application
+- kubectl apply -f ./k8s/application
 - kubectl apply -f ./k8s/monitoring/prometheus
 - kubectl apply -f ./k8s/monitoring/grafana
