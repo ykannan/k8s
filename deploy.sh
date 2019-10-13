@@ -16,7 +16,7 @@
 #apply 
 # kubectl apply -f k8s/application
 kubectl apply -f k8s/monitoring/prometheus/
-kubectl apply -f k8s/monitoring/grafana/
+# kubectl apply -f k8s/monitoring/grafana/
 
 # #set latest images on a deployment
 # kubectl set image deployments/server-deployment server=ykannan108/multi-server:$SHA
