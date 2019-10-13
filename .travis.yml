@@ -18,9 +18,17 @@ before_install:
 - docker build -t ykannan108/react-test -f ./client/Dockerfile.dev ./client
 script:
 # - docker run ykannan108/react-test npm test -- --coverage
-- echo "pass"
-deploy:
-  provider: script
-  script: bash ./deploy.sh
-  on:
-    branch: master
+
+default:
+  - step:
+      script:
+        - cd k8s/monitoring
+        - kubectl apply -f prometheus
+        - kubectl apply -f grafana
+      on: 
+        branch: master
+# deploy:
+#   provider: script
+#   script: bash ./deploy.sh
+#   on:
+#     branch: master
