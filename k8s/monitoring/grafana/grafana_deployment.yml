@@ -18,6 +18,11 @@ spec:
           volumeMounts:
             - name: grafana-volume
               mountPath: /var/lib/grafana
+          env:
+            - name: GF_SERVER_HTTP_PORT
+              value: "3000"
+            - name: GF_INSTALL_PLUGINS
+              value: "grafana-kubernetes-app"
       volumes:
         - name: grafana-volume
           emptyDir: {}

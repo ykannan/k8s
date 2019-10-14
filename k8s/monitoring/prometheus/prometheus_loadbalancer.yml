@@ -9,7 +9,11 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 9090
+    - name: prometheus-ui
+      port: 9090
       targetPort: 9090
+    - name: node-export
+      port: 9100
+      targetPort: 9100
   selector: 
     component: prometheus-server
