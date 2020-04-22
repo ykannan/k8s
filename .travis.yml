@@ -39,15 +39,7 @@ before_install:
   # - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
   # Install kubectl
-  - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
-  - chmod +x ./kubectl
-  - sudo mv kubectl /usr/local/bin
-  # Setup default AWS credentials.
-  # aws_access_key_id = AKIAQ66KETYT4X2RZB75
-  # aws_secret_access_key = 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
-  - aws configure set default.aws_access_key_id AKIAQ66KETYT4X2RZB75
-  - aws configure set default.aws_secret_access_key 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
-  - aws eks --region us-east-2 update-kubeconfig --name Dev
+
 
 script:
   # - kubectl apply -f ./k8s/application
